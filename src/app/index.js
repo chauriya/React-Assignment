@@ -2,14 +2,28 @@ import React from "react";
 import { render } from "react-dom";
 
 import { Header } from "./Components/Header";
-import { Dashboard } from "./Components/Dashboard";
-import { Login } from "./Components/Login";
-import { Register } from "./Components/Register";
-import { Profile } from "./Components/Profile";
+import { Dashboard } from "./Container/Dashboard";
+import { Login } from "./Container/Login";
+import { Register } from "./Container/Register";
+import { Profile } from "./Container/Profile";
 
 class App extends React.Component {
 
   render() {
+      var userData = {
+            "employee": [{
+                "name": "Gaurav",
+                "email": "gaurav@gmail.com"
+            },
+            {
+                "name": "ABC",
+                "email": "abc@gmail.com"
+            },{
+                "name": "xyz",
+                "email": "xyz@gmail.com"
+            }
+            ]
+        };
 
     return (
       <div className="container">
@@ -19,9 +33,27 @@ class App extends React.Component {
                 </div>
             </div>
             <div className="row">
-                <div className="col-xs-10 col-xs-offset-1">
-                    {this.props.children}
-                </div>
+                <div className="container">
+					<div className="row">
+						<div className="col-xs-10">
+							<Dashboard user={userData}/>
+						</div>
+					</div>
+					<div className="row">
+							<Register />
+						<div className="col-xs-6">
+							Login Form
+							<Login />
+						</div>
+					</div>
+					<div className="row">
+						<div className="col-xs-12">
+							<hr/>
+							<h4> Users Profile</h4>
+							<Profile user={userData} />
+						</div>
+					</div>
+				</div>
             </div>
         </div>
     );
