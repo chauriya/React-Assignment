@@ -42,14 +42,11 @@ class App extends React.Component {
 					<div className="row">
 							<Register />
 						<div className="col-xs-6">
-							Login Form
-							<Login />
+                            <Login />
 						</div>
 					</div>
 					<div className="row">
 						<div className="col-xs-12">
-							<hr/>
-							<h4> Users Profile</h4>
 							<Profile user={userData} />
 						</div>
 					</div>
