@@ -2,17 +2,13 @@ import React from "react";
 import { render } from "react-dom";
 
 class App extends React.Component {
-
   render() {
-
     return (
-      <div className="row">
-        <div className="col-xs-10 col-xs-offset-1">
-          <h1>Hello React!!!!</h1>
-        </div>
+      <div>
+        <h3>Hello World! </h3>
       </div>
     );
   }
 }
 
-render(<App/>, window.document.getElementById('app'));
+render(<App />, window.document.getElementById("app"));

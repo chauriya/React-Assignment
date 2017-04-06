@@ -2,33 +2,33 @@
   "name": "react-assignment",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "scripts": {
     "start": "npm run build",
-    "build": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot --history-api-fallback --port 8002",
+    "build": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot --port 8080",
     "build:prod": "webpack -p && cp src/index.html dist/index.html"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gauravc-cuelogic/React-Assignment.git"
   },
-  "author": "",
+  "author": "Gaurav Chauriya",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/gauravc-cuelogic/React-Assignment/issues"
   },
   "homepage": "https://github.com/gauravc-cuelogic/React-Assignment#readme",
   "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react": "15.4.2",
+    "react-dom": "15.4.2"
   },
   "devDependencies": {
-    "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.2",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.23.0",
-    "babel-preset-stage-2": "^6.22.0",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1"
+    "babel-core": "6.23.1",
+    "babel-loader": "6.3.2",
+    "babel-preset-es2015": "6.22.0",
+    "babel-preset-react": "6.23.0",
+    "babel-preset-stage-2": "6.22.0",
+    "webpack": "2.2.1",
+    "webpack-dev-server": "2.4.1"
   }
 }
