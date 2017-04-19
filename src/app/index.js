@@ -1,60 +1,26 @@
 import React from "react";
 import { render } from "react-dom";
+import { Router, Route, browserHistory, IndexRoute } from "react-router";
 
-import { Header } from "./Components/Header";
-import { Dashboard } from "./Container/Dashboard";
-import { Login } from "./Container/Login";
-import { Register } from "./Container/Register";
-import { Profile } from "./Container/Profile";
-
+import { Dashboard } from "./containers/Dashboard";
+import { Login } from "./containers/Login";
+import { Profile } from "./containers/Profile";
+import { Register } from "./containers/Register";
+import { Root } from "./containers/Root";
 class App extends React.Component {
-
   render() {
-      var userData = {
-            "employee": [{
-                "name": "Gaurav",
-                "email": "gaurav@gmail.com"
-            },
-            {
-                "name": "ABC",
-                "email": "abc@gmail.com"
-            },{
-                "name": "xyz",
-                "email": "xyz@gmail.com"
-            }
-            ]
-        };
-
     return (
-      <div className="container">
-            <div className="row">
-                <div className="col-xs-10 col-xs-offset-1">
-                    <Header/>
-                </div>
-            </div>
-            <div className="row">
-                <div className="container">
-					<div className="row">
-						<div className="col-xs-10">
-							<Dashboard user={userData}/>
-						</div>
-					</div>
-					<div className="row">
-							<Register />
-						<div className="col-xs-6">
-                            <Login />
-						</div>
-					</div>
-					<div className="row">
-						<div className="col-xs-12">
-							<Profile user={userData} />
-						</div>
-					</div>
-				</div>
-            </div>
-        </div>
+      <Router history={browserHistory}>
+        <Route path={"/"} component={Root} >
+          <IndexRoute component={Dashboard} />
+          <Route path={"dashboard"} component={Dashboard} />
+          <Route path={"profile"} component={Profile} />
+          <Route path={"login"} component={Login} />
+          <Route path={"register"} component={Register} />
+        </Route>
+      </Router>
     );
   }
 }
 
-render(<App/>, window.document.getElementById('app'));
+render(<App />, window.document.getElementById("app"));
