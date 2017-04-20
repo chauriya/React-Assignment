@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { FormElement } from "../components/FormElement";
+import { FormElement } from '../components/FormElement';
 export class Register extends React.Component {
   constructor() {
     super();
@@ -24,7 +24,7 @@ export class Register extends React.Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-xs-10 col-xs-offset-1">
+          <div className="col-xs-10 col-xs-offset-1 containerMargin">
             <form role="form">
               <div className="form-group">
                 <label> Name </label>

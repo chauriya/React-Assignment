@@ -1,19 +1,19 @@
-import React from "react";
+import React from'react';
 
 export class Profile extends React.Component {
 
     render() {
         var userData = {
-            "employee": [{
-                "name": "gaurav",
-                "email": "gaurav@gmail.com"
+            'employee': [{
+                'name': 'gaurav',
+                'email': 'gaurav@gmail.com'
             },
             {
-                "name": "devendra",
-                "email": "devendra@gmail.com"
+                'name': 'devendra',
+                'email': 'devendra@gmail.com'
             }, {
-                "name": "shashank",
-                "email": "shashank@gmail.com"
+                'name': 'shashank',
+                'email': 'shashank@gmail.com'
             }]
         };
         return (

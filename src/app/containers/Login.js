@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { FormElement } from "../components/FormElement";
+import { FormElement } from '../components/FormElement';
 export class Login extends React.Component {
   constructor() {
     super();
     this.state = {
       name: '',
       password: ''
-    }
+    };
   }
   onChangeUNameHandler(event) {
     var obj = {};
@@ -23,7 +23,7 @@ export class Login extends React.Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-xs-10 col-xs-offset-1">
+          <div className="col-xs-10 col-xs-offset-1 containerMargin">
             <form role="form">
               <div className="form-group">
                 <label> Name </label>

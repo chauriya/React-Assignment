@@ -1,12 +1,12 @@
-import React from "react";
-import { render } from "react-dom";
-import { Router, Route, browserHistory, IndexRoute } from "react-router";
+import React from 'react';
+import { render } from 'react-dom';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
-import { Dashboard } from "./containers/Dashboard";
-import { Login } from "./containers/Login";
-import { Profile } from "./containers/Profile";
-import { Register } from "./containers/Register";
-import { Root } from "./containers/Root";
+import { Dashboard } from './containers/Dashboard';
+import { Login } from './containers/Login';
+import { Profile } from './containers/Profile';
+import { Register } from './containers/Register';
+import { Root } from './containers/Root';
 class App extends React.Component {
   render() {
     return (
